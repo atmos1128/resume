@@ -1,0 +1,249 @@
+@mixin ab_center
+  position: absolute 
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+  
+@mixin breakpoint($point)
+  @if $point == pc
+    @media only screen and (max-width: 1024px)
+      @content 
+  @else if $point == pad 
+    @media only screen and (max-width: 980px)  
+      @content
+  @else if $point == spad
+    @media screen and(max-width: 767px)
+      @content
+  @else if $point == bmobile
+    @media screen and (max-width: 600px)
+      @content
+  @else if $point == mobile 
+    @media  screen and (max-width: 480px)
+      @content
+  @else if $point == mobile414
+    @media  screen and (max-width: 414px)
+      @content
+  @else if $point == mobile375
+    @media  screen and (max-width: 375px)
+      @content
+  @else if $point == smobile 
+    @media  screen and (max-width: 360px)
+      @content
+  @else if $point == xsmobile 
+    @media  screen and (max-width: 320px)
+      @content 
+  
+*
+  font-family: 微軟正黑體
+  // border: 1px solid #000
+  box-sizing: border-box
+ 
+html,body
+  padding: 0
+  margin: 0
+  
+// section#about,section#work,section#skill,section#works
+//   display: none
+  
+.mian
+  background-color: #222
+  position: relative
+  header
+    width: 100%
+    height: 50px
+    position: fixed
+    top: 0
+    left: 0    
+    display: flex
+    z-index: 99
+    background-color: rgba(#222,0.8)
+    padding: 10px 0px
+    .header_left
+      width: 30%
+      display: flex
+      align-items: center
+      padding-left: 20px
+      a
+        text-decoration: none
+        color: #eee
+    .header_right
+      width: 70%
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      padding-right: 50px
+      #nav
+        ul
+          margin-bottom: 0
+          li
+            display: inline-block
+            list-style-type: none
+            margin-left: 10px
+            vertical-align: middle
+            a
+              text-decoration: none
+              color: #eee
+              letter-spacing: 1px
+  .at_top
+    background-color: transparent
+  section#index
+    position: relative
+    img
+      width: 100%
+    span
+      +ab_center
+      color: #eee
+      font-size: 30px
+      font-weight: 900
+    .explore
+      +ab_center
+      font-size: 16px
+      color: #fff
+      top: 85%
+      transition: 0.5s
+      &:after
+        content: "v"
+        display: block
+        position: absolute 
+        left: 50%
+        top: 80%
+        transform: scaleX(1.2) scaleY(0.5) translateX(-50%)
+  //about
+  section#about
+    padding: 50px
+    .container
+      .row
+        .col-sm-12
+          h2 
+            width: 100%
+            text-align: center
+            color: #fff
+        .col-md-4
+          padding: 20px 0px
+          div
+            max-width: 300px
+            width: 100%
+            border-radius: 50%        
+            overflow: hidden
+            margin: auto
+            img
+              width: 100%
+        .col-md-8
+          padding: 20px
+          color: #fff
+          opacity: 0
+          transition-duration: 0.5s
+  //work      
+  section#work
+    background-color: #fff
+    padding: 50px
+    color: #555
+    .container
+      .row
+        .col-sm-12
+          text-align: center
+          padding: 20px
+        .col-md-4.col-sm-12
+          i
+            font-size: 40px
+            margin-bottom: 10px
+          p
+            font-weight: 900
+            font-size: 24px
+  // skill     
+  section#skill
+    color: #fff
+    padding: 50px
+    .container
+      .row
+        .col-sm-12
+          text-align: center
+          h2
+        .col-md-6.col-sm-12
+          margin-bottom: 20px
+          div
+            height: 20px
+            border: 1px solid #fff
+            .bar   
+              width: 0
+              height: 100%
+              background-color: #fff
+              transition-duration: 0.5s
+            .bar80
+              width: 80%
+            .bar70
+              width: 70%
+            .bar60
+              width: 60%
+          
+  section#works
+    background-color: #fff
+    padding: 50px
+    .container
+      .row
+        .col-sm-12
+          text-align: center
+          margin-bottom: 30px
+        .col-md-4.col-sm-12
+          div
+            width: 100%
+            height: 200px
+            box-shadow: 0px 0px 2px #000            
+
+  //contact       
+  section#contact
+    background-color: #000
+    color: #fff
+    padding: 50px
+    .container
+      .row
+        .col-sm-12
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-bottom: 20px
+          a
+            +size(50px)
+            border: 1px solid #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            transition-duration: 0.5s
+            border-radius: 50%
+            color: #fff
+            margin: 10px
+            &:hover
+              transform: scale(1.2)
+              box-shadow: 1px 1px 0px rgba(#fff,0.5)
+              background-color: #333
+            
+  footer
+    background-color: #fff
+    text-align: center
+    padding: 5px
+    p
+      margin: 10px 0px
+
+  #topBtn
+    position: fixed
+    right: 20px
+    bottom: 50px
+    div
+      +size(50px)
+      background-color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      box-shadow: 0px 0px 2px rgba(#000,0.8)
+      cursor: pointer
+      .fas.fa-chevron-up
+        font-size: 30px
+      
+
+    
+     

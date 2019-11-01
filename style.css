@@ -13,7 +13,7 @@ html, body {
   background-color: #222;
   position: relative;
 }
-.mian header {
+ header {
   width: 100%;
   height: 50px;
   position: fixed;
@@ -24,47 +24,47 @@ html, body {
   background-color: rgba(34, 34, 34, 0.8);
   padding: 10px 0px;
 }
-.mian header .header_left {
+.header_left {
   width: 30%;
   display: flex;
   align-items: center;
   padding-left: 20px;
 }
-.mian header .header_left a {
+.header_left a {
   text-decoration: none;
   color: #eee;
 }
-.mian header .header_right {
+.header_right {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 50px;
 }
-.mian header .header_right #nav ul {
+.header_right #nav ul {
   margin-bottom: 0;
 }
-.mian header .header_right #nav ul li {
+.header_right #nav ul li {
   display: inline-block;
   list-style-type: none;
   margin-left: 10px;
   vertical-align: middle;
 }
-.mian header .header_right #nav ul li a {
+.header_right #nav ul li a {
   text-decoration: none;
   color: #eee;
   letter-spacing: 1px;
 }
-.mian .at_top {
+ .at_top {
   background-color: transparent;
 }
-.mian section#index {
+ section#index {
   position: relative;
 }
-.mian section#index img {
+ section#index img {
   width: 100%;
 }
-.mian section#index span {
+ section#index span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -73,7 +73,7 @@ html, body {
   font-size: 30px;
   font-weight: 900;
 }
-.mian section#index .explore {
+ section#index .explore {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -83,7 +83,7 @@ html, body {
   top: 85%;
   transition: 0.5s;
 }
-.mian section#index .explore:after {
+ section#index .explore:after {
   content: "v";
   display: block;
   position: absolute;
@@ -91,104 +91,112 @@ html, body {
   top: 80%;
   transform: scaleX(1.2) scaleY(0.5) translateX(-50%);
 }
-.mian section#about {
+ section#about {
   padding: 50px;
 }
-.mian section#about .container .row .col-sm-12 h2 {
+ section#about .container .row .col-sm-12 h2 {
   width: 100%;
   text-align: center;
   color: #fff;
 }
-.mian section#about .container .row .col-md-4 {
+ section#about .container .row .col-md-4 {
   padding: 20px 0px;
 }
-.mian section#about .container .row .col-md-4 div {
+ section#about .container .row .col-md-4 div {
   max-width: 300px;
   width: 100%;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
 }
-.mian section#about .container .row .col-md-4 div img {
+ section#about .container .row .col-md-4 div img {
   width: 100%;
 }
-.mian section#about .container .row .col-md-8 {
+ section#about .container .row .col-md-8 {
   padding: 20px;
   color: #fff;
   opacity: 0;
   transition-duration: 0.5s;
 }
-.mian section#work {
+ section#work {
   background-color: #fff;
   padding: 50px;
   color: #555;
 }
-.mian section#work .container .row .col-sm-12 {
+ section#work .container .row .col-sm-12 {
   text-align: center;
   padding: 20px;
 }
-.mian section#work .container .row .col-md-4.col-sm-12 i {
+ section#work .container .row .col-md-4.col-sm-12 i {
   font-size: 40px;
   margin-bottom: 10px;
 }
-.mian section#work .container .row .col-md-4.col-sm-12 p {
+ section#work .container .row .col-md-4.col-sm-12 p {
   font-weight: 900;
   font-size: 24px;
 }
-.mian section#skill {
+ section#skill {
   color: #fff;
   padding: 50px;
 }
-.mian section#skill .container .row .col-sm-12 {
+ section#skill .container .row .col-sm-12 {
   text-align: center;
 }
-.mian section#skill .container .row .col-md-6.col-sm-12 {
+ section#skill .container .row .col-md-6.col-sm-12 {
   margin-bottom: 20px;
 }
-.mian section#skill .container .row .col-md-6.col-sm-12 div {
+ section#skill .container .row .col-md-6.col-sm-12 div {
   height: 20px;
   border: 1px solid #fff;
 }
-.mian section#skill .container .row .col-md-6.col-sm-12 div .bar {
+ section#skill .container .row .col-md-6.col-sm-12 div .bar {
   width: 0;
   height: 100%;
   background-color: #fff;
   transition-duration: 0.5s;
 }
-.mian section#skill .container .row .col-md-6.col-sm-12 div .bar80 {
+ section#skill .container .row .col-md-6.col-sm-12 div .bar80 {
   width: 80%;
 }
-.mian section#skill .container .row .col-md-6.col-sm-12 div .bar70 {
+ section#skill .container .row .col-md-6.col-sm-12 div .bar70 {
   width: 70%;
 }
-.mian section#skill .container .row .col-md-6.col-sm-12 div .bar60 {
+ section#skill .container .row .col-md-6.col-sm-12 div .bar60 {
   width: 60%;
 }
-.mian section#works {
+ section#works {
   background-color: #fff;
   padding: 50px;
 }
-.mian section#works .container .row .col-sm-12 {
+ section#works .container .row .col-sm-12 {
   text-align: center;
   margin-bottom: 30px;
 }
-.mian section#works .container .row .col-md-4.col-sm-12 div {
+ section#works .container .row .col-md-4.col-sm-12 div {
   width: 100%;
-  height: 200px;
-  box-shadow: 0px 0px 2px #000;
+  box-shadow: 0px 0px 2px #eee;
+  transition-duration: 1s;
 }
-.mian section#contact {
+section#works .container .row .col-md-4.col-sm-12 div:hover {
+  width: 100%;
+  transform: translate(-5px, -5px);
+  box-shadow: 2px 3px 2px #999;
+}
+.mian section#works .container .row .col-md-4.col-sm-12 div a img {
+  width: 100%;
+}
+ section#contact {
   background-color: #000;
   color: #fff;
   padding: 50px;
 }
-.mian section#contact .container .row .col-sm-12 {
+ section#contact .container .row .col-sm-12 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-.mian section#contact .container .row .col-sm-12 a {
+ section#contact .container .row .col-sm-12 a {
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
@@ -200,25 +208,25 @@ html, body {
   color: #fff;
   margin: 10px;
 }
-.mian section#contact .container .row .col-sm-12 a:hover {
+ section#contact .container .row .col-sm-12 a:hover {
   transform: scale(1.2);
   box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
   background-color: #333;
 }
-.mian footer {
+ footer {
   background-color: #fff;
   text-align: center;
   padding: 5px;
 }
-.mian footer p {
+ footer p {
   margin: 10px 0px;
 }
-.mian #topBtn {
+ #topBtn {
   position: fixed;
   right: 20px;
   bottom: 50px;
 }
-.mian #topBtn div {
+ #topBtn div {
   width: 50px;
   height: 50px;
   background-color: #fff;
@@ -229,6 +237,6 @@ html, body {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
-.mian #topBtn div .fas.fa-chevron-up {
+ #topBtn div .fas.fa-chevron-up {
   font-size: 30px;
 }

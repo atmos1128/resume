@@ -1,10 +1,10 @@
-$(window).scroll(function(evt){
-  if($(window).scrollTop()>0){
-    $("header").removeClass("at_top");
-  }else{
-    $("header").addClass("at_top");
-  }   
-});
+// $(window).scroll(function(evt){
+//   if($(window).scrollTop()>0){
+//     $("header").removeClass("at_top");
+//   }else{
+//     $("header").addClass("at_top");
+//   }   
+// });
 
 $(window).scroll(function() {
   if($(window).scrollTop() >= $('#skill').offset().top){
@@ -31,3 +31,14 @@ $(function(){
 	}).scroll();
 });
 var s = skrollr.init();
+
+$(document).ready(function() {
+	$('#hamburger').on('click', function(event) {
+		event.preventDefault();
+		$('.header_right').toggleClass('menu-show');
+	});
+
+});
+
+
+

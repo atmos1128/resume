@@ -13,7 +13,7 @@ html, body {
   background-color: #222;
   position: relative;
 }
- header {
+.mian header {
   width: 100%;
   height: 50px;
   position: fixed;
@@ -24,47 +24,104 @@ html, body {
   background-color: rgba(34, 34, 34, 0.8);
   padding: 10px 0px;
 }
-.header_left {
+.mian header .header_left {
   width: 30%;
   display: flex;
   align-items: center;
   padding-left: 20px;
 }
-.header_left a {
+.mian header .header_left a {
   text-decoration: none;
   color: #eee;
 }
-.header_right {
+.mian header .header_right {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 50px;
 }
-.header_right #nav ul {
+@media screen and (max-width: 767px) {
+  .mian header .header_right {
+    max-height: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    margin-top: 40px;
+    transition: max-height 2.3s;
+    display: block;
+  }
+}
+.mian header .header_right #nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .mian header .header_right #nav {
+    background-color: rgba(34, 34, 34, 0.8);
+    flex-direction: column;
+  }
+}
+.mian header .header_right #nav ul {
   margin-bottom: 0;
 }
-.header_right #nav ul li {
+@media screen and (max-width: 767px) {
+  .mian header .header_right #nav ul {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+.mian header .header_right #nav ul li {
   display: inline-block;
   list-style-type: none;
   margin-left: 10px;
   vertical-align: middle;
 }
-.header_right #nav ul li a {
+@media screen and (max-width: 767px) {
+  .mian header .header_right #nav ul li {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+    text-align: center;
+  }
+}
+.mian header .header_right #nav ul li a {
   text-decoration: none;
   color: #eee;
   letter-spacing: 1px;
 }
- .at_top {
+.mian header #hamburger {
+  width: 70%;
+  padding-right: 30px;
+  text-align: right;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mian header #hamburger {
+    display: block;
+  }
+}
+.mian header #hamburger a {
+  text-decoration: none;
+  color: #eee;
+}
+.mian header .menu-show {
+  max-height: 500px;
+}
+.mian .at_top {
   background-color: transparent;
 }
- section#index {
+.mian section#index {
   position: relative;
 }
- section#index img {
+.mian section#index img {
   width: 100%;
 }
- section#index span {
+.mian section#index span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -73,7 +130,7 @@ html, body {
   font-size: 30px;
   font-weight: 900;
 }
- section#index .explore {
+.mian section#index .explore {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -83,7 +140,7 @@ html, body {
   top: 85%;
   transition: 0.5s;
 }
- section#index .explore:after {
+.mian section#index .explore:after {
   content: "v";
   display: block;
   position: absolute;
@@ -91,112 +148,111 @@ html, body {
   top: 80%;
   transform: scaleX(1.2) scaleY(0.5) translateX(-50%);
 }
- section#about {
+.mian section#about {
   padding: 50px;
 }
- section#about .container .row .col-sm-12 h2 {
+.mian section#about .container .row .col-sm-12 h2 {
   width: 100%;
   text-align: center;
   color: #fff;
 }
- section#about .container .row .col-md-4 {
+.mian section#about .container .row .col-md-4 {
   padding: 20px 0px;
 }
- section#about .container .row .col-md-4 div {
+.mian section#about .container .row .col-md-4 div {
   max-width: 300px;
   width: 100%;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
 }
- section#about .container .row .col-md-4 div img {
+.mian section#about .container .row .col-md-4 div img {
   width: 100%;
 }
- section#about .container .row .col-md-8 {
+.mian section#about .container .row .col-md-8 {
   padding: 20px;
   color: #fff;
   opacity: 0;
   transition-duration: 0.5s;
 }
- section#work {
+.mian section#work {
   background-color: #fff;
   padding: 50px;
   color: #555;
 }
- section#work .container .row .col-sm-12 {
+.mian section#work .container .row .col-sm-12 {
   text-align: center;
   padding: 20px;
 }
- section#work .container .row .col-md-4.col-sm-12 i {
+.mian section#work .container .row .col-md-4.col-sm-12 i {
   font-size: 40px;
   margin-bottom: 10px;
 }
- section#work .container .row .col-md-4.col-sm-12 p {
+.mian section#work .container .row .col-md-4.col-sm-12 p {
   font-weight: 900;
   font-size: 24px;
 }
- section#skill {
+.mian section#skill {
   color: #fff;
   padding: 50px;
 }
- section#skill .container .row .col-sm-12 {
+.mian section#skill .container .row .col-sm-12 {
   text-align: center;
 }
- section#skill .container .row .col-md-6.col-sm-12 {
+.mian section#skill .container .row .col-md-6.col-sm-12 {
   margin-bottom: 20px;
 }
- section#skill .container .row .col-md-6.col-sm-12 div {
+.mian section#skill .container .row .col-md-6.col-sm-12 div {
   height: 20px;
   border: 1px solid #fff;
 }
- section#skill .container .row .col-md-6.col-sm-12 div .bar {
+.mian section#skill .container .row .col-md-6.col-sm-12 div .bar {
   width: 0;
   height: 100%;
   background-color: #fff;
   transition-duration: 0.5s;
 }
- section#skill .container .row .col-md-6.col-sm-12 div .bar80 {
+.mian section#skill .container .row .col-md-6.col-sm-12 div .bar80 {
   width: 80%;
 }
- section#skill .container .row .col-md-6.col-sm-12 div .bar70 {
+.mian section#skill .container .row .col-md-6.col-sm-12 div .bar70 {
   width: 70%;
 }
- section#skill .container .row .col-md-6.col-sm-12 div .bar60 {
+.mian section#skill .container .row .col-md-6.col-sm-12 div .bar60 {
   width: 60%;
 }
- section#works {
+.mian section#works {
   background-color: #fff;
   padding: 50px;
 }
- section#works .container .row .col-sm-12 {
+.mian section#works .container .row .col-sm-12 {
   text-align: center;
   margin-bottom: 30px;
 }
- section#works .container .row .col-md-4.col-sm-12 div {
+.mian section#works .container .row .col-md-4.col-sm-12 div {
   width: 100%;
   box-shadow: 0px 0px 2px #eee;
-  transition-duration: 1s;
+  transition-duration: 0.8s;
 }
-section#works .container .row .col-md-4.col-sm-12 div:hover {
-  width: 100%;
+.mian section#works .container .row .col-md-4.col-sm-12 div:hover {
   transform: translate(-5px, -5px);
   box-shadow: 2px 3px 2px #999;
 }
 .mian section#works .container .row .col-md-4.col-sm-12 div a img {
   width: 100%;
 }
- section#contact {
+.mian section#contact {
   background-color: #000;
   color: #fff;
   padding: 50px;
 }
- section#contact .container .row .col-sm-12 {
+.mian section#contact .container .row .col-sm-12 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
- section#contact .container .row .col-sm-12 a {
+.mian section#contact .container .row .col-sm-12 a {
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
@@ -208,25 +264,25 @@ section#works .container .row .col-md-4.col-sm-12 div:hover {
   color: #fff;
   margin: 10px;
 }
- section#contact .container .row .col-sm-12 a:hover {
+.mian section#contact .container .row .col-sm-12 a:hover {
   transform: scale(1.2);
   box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
   background-color: #333;
 }
- footer {
+.mian footer {
   background-color: #fff;
   text-align: center;
   padding: 5px;
 }
- footer p {
+.mian footer p {
   margin: 10px 0px;
 }
- #topBtn {
+.mian #topBtn {
   position: fixed;
   right: 20px;
   bottom: 50px;
 }
- #topBtn div {
+.mian #topBtn div {
   width: 50px;
   height: 50px;
   background-color: #fff;
@@ -237,6 +293,6 @@ section#works .container .row .col-md-4.col-sm-12 div:hover {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
- #topBtn div .fas.fa-chevron-up {
+.mian #topBtn div .fas.fa-chevron-up {
   font-size: 30px;
 }

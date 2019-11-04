@@ -184,13 +184,15 @@ html, body {
   text-align: center;
   padding: 20px;
 }
-.mian section#work .container .row .col-md-4.col-sm-12 i {
+.mian section#work .container .row .col-md-6.col-sm-12 i, .mian section#work .container .row .da i {
   font-size: 40px;
   margin-bottom: 10px;
 }
-.mian section#work .container .row .col-md-4.col-sm-12 p {
+.mian section#work .container .row .col-md-6.col-sm-12 h5, .mian section#work .container .row .da h5 {
   font-weight: 900;
-  font-size: 24px;
+}
+.mian section#work .container .row .col-md-6.col-sm-12 p, .mian section#work .container .row .da p {
+  font-size: 18px;
 }
 .mian section#skill {
   color: #fff;
